@@ -25,30 +25,30 @@ var app = new Vue({
         });
     },
 
-    // onChange(event) {
-    //   console.log(event.target);
-    //   console.log(event.target.value);
-    //
-    //   let selected = event.target.value.toLowerCase();
-    //
-    //   if (selected == "all") {
-    //     console.log(selected);
-    //     this.selectedDisks = this.disks;
-    //     console.log(this.selectedDisks)
-    //
-    //   } else {
-    //     console.log(this.disks);
-    //     console.log(selected);
-    //     console.log(this.selectedDisks);
-    //     this.selectedDisks = [];
-    //     console.log(this.selectedDisks);
-    //     this.selectedDisks = this.disks.filter((disk, index) => {
-    //       return disk.genre.toLowerCase() == selected;
-    //     })
-    //     console.log(this.selectedDisks);
-    //   }
+    onChange(event) {
+      console.log(event.target);
+      console.log(event.target.value);
 
-    // }
+      let selected = event.target.value.toLowerCase();
+
+      if (selected == "all") {
+        console.log(selected);
+        this.selectedDisks = this.disks;
+        console.log(this.selectedDisks)
+
+      } else {
+        console.log(this.disks);
+        console.log(selected);
+        console.log(this.selectedDisks);
+        this.selectedDisks = [];
+        console.log(this.selectedDisks);
+        this.selectedDisks = this.disks.filter((disk, index) => {
+          return disk.genre.toLowerCase() == selected;
+        })
+        console.log(this.selectedDisks);
+      }
+
+    }
 
   }
 

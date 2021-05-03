@@ -16,6 +16,8 @@
       <select class="disk-selection"
       name="disk-selection"
       v-model="selectedGenre"
+      @change="onChange(event)"
+
     >
         <option value="all" selected>Tutti i generi</option>
         <option value="rock">Rock</option>
