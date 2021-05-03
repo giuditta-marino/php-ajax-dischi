@@ -17,7 +17,6 @@
       name="disk-selection"
       v-model="selectedGenre"
       @change="onChange(event)"
-
     >
         <option value="all" selected>Tutti i generi</option>
         <option value="rock">Rock</option>
@@ -25,6 +24,11 @@
         <option value="pop">Pop</option>
         <option value="metal">Metal</option>
       </select>
+      <input type="text" name="search" value=""
+      v-model="inputSearch"
+      @keyup.enter="filterByArtist()"
+      placeholder="Ricerca per artista">
+      <p>{{inputSearch}}</p>
       <div class="container">
         <div class="flip-card"
              v-for="disk in selectedDisks">
