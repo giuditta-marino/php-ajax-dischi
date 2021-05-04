@@ -27,7 +27,7 @@ var app = new Vue({
     filterByArtist: function () {
       axios.get('http://localhost/php-ajax-dischi/milestone_2/api/music.php', {params: {author: this.inputSearch}})
         .then((response) => {
-          this.disks = response.data.response;
+          this.selectedDisks = response.data.response;
         });
     },
 
