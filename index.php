@@ -1,4 +1,4 @@
-<?php include './dati.php' ?>
+<?php include __DIR__ . '/dati.php'; ?>
 
 <!DOCTYPE html>
 <html lang="it" dir="ltr">
@@ -66,6 +66,6 @@
     <script src="https://cdn.jsdelivr.net/npm/vue"></script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" charset="utf-8"></script>
-    <script src="./assets/js/main.js" charset="utf-8"></script>
+    <!-- <script src="./assets/js/main.js" charset="utf-8"></script> -->
   </body>
 </html>

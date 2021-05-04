@@ -1,4 +1,6 @@
 <?php
+// header('Content-Type: application/json');
+
 $disks = [
  [
    'poster'=> 'https://www.onstageweb.com/wp-content/uploads/2018/09/bon-jovi-new-jersey.jpg',
@@ -66,9 +68,11 @@ $disks = [
  [
    'poster'=> 'https://m.media-amazon.com/images/I/71K9CbNZPsL._SS500_.jpg',
    'title'=> 'Bad',
-   'author'=> 'Michael Jacjson',
+   'author'=> 'Michael Jackson',
    'genre'=> 'Pop',
    'year'=> '1987'
  ]
 ];
+
+// echo json_encode($disks);
 ?>

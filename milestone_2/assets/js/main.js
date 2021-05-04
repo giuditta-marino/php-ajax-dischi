@@ -6,8 +6,7 @@ var app = new Vue({
     selectedGenre: "all",
     disks: [],
     selectedDisks: [],
-    inputSearch: '',
-    $filteredDisks: []
+    inputSearch: ''
   },
 
   mounted(){
@@ -16,23 +15,20 @@ var app = new Vue({
 
   methods: {
     showdisks: function(){
-      axios.get('http://localhost/php-ajax-dischi/dati.php')
+      axios.get('http://localhost/php-ajax-dischi/milestone_2/api/music.php')
         .then((response) => {
           console.log(response);
-          this.disks = response.data;
+          this.disks = response.data.response;
           this.selectedDisks = this.disks;
           console.log(this.disks);
         });
     },
 
     filterByArtist: function () {
-      console.log(this.inputSearch);
-
-      axios.get(`http://localhost/php-ajax-dischi/milestone_2/artist.php/?artist=${this.inputSearch}`)
+      axios.get('http://localhost/php-ajax-dischi/milestone_2/api/music.php', {params: {author: this.inputSearch}})
         .then((response) => {
-          this.albumsByArstist = response.data;
+          this.disks = response.data.response;
         });
-        return this.albumsByArstist;
     },
 
     onChange(event) {
